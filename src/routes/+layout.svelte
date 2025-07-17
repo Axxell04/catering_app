@@ -4,6 +4,7 @@
 	import '../app.css';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import { onMount } from 'svelte';
+	import { clientesStore } from '$lib/stores/clientesStore';
 
 	let { children } = $props();
 
@@ -11,6 +12,7 @@
 		const res = await fetch("http://localhost:8000/clients");
 		const clientes = await res.json()
 		console.log(clientes)
+		clientesStore.set(clientes);
 
 	}
 
