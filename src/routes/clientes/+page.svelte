@@ -1,3 +1,8 @@
+<script lang="ts">
+    import CardCliente from "$lib/components/CardCliente.svelte";
+import Icon from "@iconify/svelte";
+</script>
+
 <div>
     <div class="flex flex-col gap-4 border border-sky-200 p-3 rounded-2xl place-items-center">
         <span>
@@ -12,11 +17,7 @@
         Clientes
     </h2>
     <div class="flex flex-col gap-3 place-items-center">
-        <div class="bg-sky-200 rounded-xl p-3 w-fit">
-            <span>
-                Nombre cliente
-            </span>
-        </div>
+        <CardCliente />
         <div class="bg-sky-200 rounded-xl p-3 w-fit">
             <span>
                 Nombre cliente
